@@ -16,9 +16,9 @@ const Hero = () => {
 
   return (
     <section
-      className='px-4 md:px-40 flex justify-center py-10 md:py-20 bg-background-light dark:bg-[#111618]'
+      className='px-4  flex justify-center py-10 md:py-20 bg-background-light dark:bg-[#111618]'
       id='home'>
-      <div className='layout-content-container flex flex-col max-w-[960px] flex-1'>
+      <div className='layout-content-container flex flex-col max-w-7xl flex-1'>
         <div className='@container'>
           <div className='flex flex-col-reverse gap-6 px-4 py-6 md:py-10 @[480px]:gap-8 @[864px]:flex-row items-center'>
             <motion.div

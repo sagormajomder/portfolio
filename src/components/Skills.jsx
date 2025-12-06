@@ -38,9 +38,9 @@ const skillsData = [
 const Skills = () => {
   return (
     <section
-      className='px-4 md:px-40 flex justify-center py-16 bg-background-light dark:bg-[#111618]'
+      className='px-4 flex justify-center py-16 bg-background-light dark:bg-[#111618]'
       id='skills'>
-      <div className='layout-content-container flex flex-col max-w-[960px] flex-1'>
+      <div className='layout-content-container flex flex-col max-w-7xl flex-1'>
         <div className='px-4 pb-8 pt-5 text-center'>
           <h2 className='text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]'>
             Technical Skills
