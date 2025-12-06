@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Developer Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Sticky Navbar -->
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-[#283339] bg-background-light/95 dark:bg-[#111618]/95 backdrop-blur-sm px-4 md:px-10 py-3">
+            <div class="flex items-center gap-4 text-gray-900 dark:text-white">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined text-3xl">terminal</span>
+                </div>
+                <h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                    DevPortfolio</h2>
+            </div>
+            <div class="hidden md:flex flex-1 justify-end gap-8">
+                <nav class="flex items-center gap-9">
+                    <a class="text-gray-700 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#home">Home</a>
+                    <a class="text-gray-700 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#about">About</a>
+                    <a class="text-gray-700 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#skills">Skills</a>
+                    <a class="text-gray-700 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#projects">Projects</a>
+                    <a class="text-gray-700 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                        href="#contact">Contact</a>
+                </nav>
+            </div>
+            <!-- Mobile Menu Icon (Placeholder functionality) -->
+            <div class="md:hidden text-gray-900 dark:text-white">
+                <span class="material-symbols-outlined cursor-pointer">menu</span>
+            </div>
+        </header>
+        <!-- Main Content Wrapper -->
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="px-4 md:px-40 flex justify-center py-10 md:py-20 bg-background-light dark:bg-[#111618]"
+                id="home">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="@container">
+                        <div
+                            class="flex flex-col-reverse gap-6 px-4 py-6 md:py-10 @[480px]:gap-8 @[864px]:flex-row items-center">
+                            <div
+                                class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center flex-1">
+                                <div class="flex flex-col gap-4 text-left">
+                                    <div
+                                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit">
+                                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                        <span class="text-xs font-bold text-primary tracking-wide uppercase">Available
+                                            for hire</span>
+                                    </div>
+                                    <h1
+                                        class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                        Alex Morgan <br /> Full Stack Developer
+                                    </h1>
+                                    <h2
+                                        class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-normal max-w-lg">
+                                        Crafting robust and scalable web applications with modern technologies. Bridging
+                                        the gap between design and engineering.
+                                    </h2>
+                                </div>
+                                <div class="flex flex-wrap gap-4 items-center">
+                                    <button
+                                        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-sky-600 transition-colors shadow-lg shadow-primary/20">
+                                        <span class="material-symbols-outlined mr-2 text-[20px]">download</span>
+                                        <span class="truncate">Download Resume</span>
+                                    </button>
+                                    <!-- Social Icons -->
+                                    <div class="flex gap-3">
+                                        <a class="rounded-lg bg-gray-200 dark:bg-[#283339] p-3 hover:bg-gray-300 dark:hover:bg-[#34424a] transition-colors group"
+                                            href="#">
+                                            <span
+                                                class="material-symbols-outlined text-gray-700 dark:text-white group-hover:text-primary transition-colors text-[24px]">code</span>
+                                        </a>
+                                        <a class="rounded-lg bg-gray-200 dark:bg-[#283339] p-3 hover:bg-gray-300 dark:hover:bg-[#34424a] transition-colors group"
+                                            href="#">
+                                            <span
+                                                class="material-symbols-outlined text-gray-700 dark:text-white group-hover:text-primary transition-colors text-[24px]">alternate_email</span>
+                                        </a>
+                                        <a class="rounded-lg bg-gray-200 dark:bg-[#283339] p-3 hover:bg-gray-300 dark:hover:bg-[#34424a] transition-colors group"
+                                            href="#">
+                                            <span
+                                                class="material-symbols-outlined text-gray-700 dark:text-white group-hover:text-primary transition-colors text-[24px]">chat</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full max-w-[320px] md:max-w-[400px] flex justify-center @[864px]:w-1/2">
+                                <div
+                                    class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-[#283339] shadow-2xl">
+                                    <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                                        data-alt="Portrait of Alex Morgan"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBexxyqsG-T75P_POLSAERNLg5FY0kl-b041fBynGAUcNcxdLCbGNBj_i30OQUzlmYk4jR-ZCInjJ9-SPIBT97FIM2G3or4kanEQGvZNXOWxgk7fYYMz9w1Wev9xmVQw6y-XLMANe10619z0fmbvKJ3pddwRcduhHJYyYndB5WDyJGt8voKqsZI3heEhu9Efwze8C1JGjH66rdxptHFATm04Vq7rkD5uVy-5y_PgWk6wSYNuRTjcak5KHZwfTY6Hg95Xcm4jJwQbWNM");'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Section -->
+            <section class="px-4 md:px-40 flex justify-center py-16 bg-white dark:bg-[#151c20]" id="about">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="px-4 pb-3 pt-5">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="h-px flex-1 bg-gray-200 dark:bg-[#283339]"></span>
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">About Me</span>
+                            <span class="h-px flex-1 bg-gray-200 dark:bg-[#283339]"></span>
+                        </div>
+                        <h2
+                            class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] text-center mb-8">
+                            Who I Am</h2>
+                    </div>
+                    <div class="px-4">
+                        <div
+                            class="bg-gray-50 dark:bg-[#1a2329] p-8 rounded-xl border border-gray-100 dark:border-[#283339]">
+                            <p class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed pb-6">
+                                I am a passionate Full Stack Developer with over 5 years of experience in building
+                                digital products. My journey began with a curiosity for how things work on the web,
+                                which quickly turned into a career obsession. I specialize in the JavaScript ecosystem,
+                                particularly React and Node.js, but I'm never afraid to pick up new tools to solve the
+                                right problems.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed">
+                                Beyond coding, I love mentoring junior developers and contributing to open-source
+                                projects. When I'm not at my computer, you can find me hiking, reading sci-fi novels, or
+                                experimenting with new coffee brewing methods.
+                            </p>
+                        </div>
+                        <!-- Mini Stats -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                            <div
+                                class="p-4 bg-gray-50 dark:bg-[#1a2329] rounded-lg text-center border border-gray-100 dark:border-[#283339]">
+                                <h3 class="text-3xl font-black text-primary">5+</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Years Experience</p>
+                            </div>
+                            <div
+                                class="p-4 bg-gray-50 dark:bg-[#1a2329] rounded-lg text-center border border-gray-100 dark:border-[#283339]">
+                                <h3 class="text-3xl font-black text-primary">50+</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Projects Done</p>
+                            </div>
+                            <div
+                                class="p-4 bg-gray-50 dark:bg-[#1a2329] rounded-lg text-center border border-gray-100 dark:border-[#283339]">
+                                <h3 class="text-3xl font-black text-primary">20+</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Happy Clients</p>
+                            </div>
+                            <div
+                                class="p-4 bg-gray-50 dark:bg-[#1a2329] rounded-lg text-center border border-gray-100 dark:border-[#283339]">
+                                <h3 class="text-3xl font-black text-primary">100%</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Commitment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Skills Section -->
+            <section class="px-4 md:px-40 flex justify-center py-16 bg-background-light dark:bg-[#111618]" id="skills">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="px-4 pb-8 pt-5 text-center">
+                        <h2 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
+                            Technical Skills</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-2">The tools and technologies I use to bring ideas
+                            to life.</p>
+                    </div>
+                    <div class="px-4 grid gap-8">
+                        <!-- Frontend -->
+                        <div>
+                            <h3
+                                class="text-gray-900 dark:text-white text-xl font-semibold mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">web</span> Frontend
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">React.js</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Next.js</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">TypeScript</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Redux</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">HTML5/CSS3</span>
+                            </div>
+                        </div>
+                        <!-- Backend -->
+                        <div>
+                            <h3
+                                class="text-gray-900 dark:text-white text-xl font-semibold mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">dns</span> Backend
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Node.js</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Express</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Python</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">PostgreSQL</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">MongoDB</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Firebase</span>
+                            </div>
+                        </div>
+                        <!-- Tools -->
+                        <div>
+                            <h3
+                                class="text-gray-900 dark:text-white text-xl font-semibold mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">build</span> Tools &amp; DevOps
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Git
+                                    &amp; GitHub</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Docker</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">AWS</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Figma</span>
+                                <span
+                                    class="px-4 py-2 rounded-full bg-white dark:bg-[#1a2329] border border-gray-200 dark:border-[#283339] text-gray-700 dark:text-gray-200 text-sm font-medium shadow-sm">Jira</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Projects Section -->
+            <section class="px-4 md:px-40 flex justify-center py-16 bg-white dark:bg-[#151c20]" id="projects">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="px-4 pb-8 pt-5 text-center">
+                        <h2 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
+                            Featured Projects</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-2">A selection of things I've built.</p>
+                    </div>
+                    <div class="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project Card 1 -->
+                        <div
+                            class="bg-background-light dark:bg-[#1a2329] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#283339] hover:shadow-lg transition-shadow group">
+                            <div class="h-48 w-full bg-cover bg-center" data-alt="E-commerce Dashboard UI"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDk_cusmnVRnltapveA4CcPnOerwdHoEnJ8iDDfgQ_Ui07XuMHAEkKMSPQffBVg3cUZpuMVzmvpH1xA0-SAsHGoTGwf_0_Y8fWVjDH9pgiAY07wpjR9JGa_WlvUTOQQHWNgSXW2b4D0Wsegl4MT8jXPcKlxR7G309ThBU3BbfKi273Ve6ZO4eq9Q6bdxKseI0fMDWkv0EPVA5NEKGn1F_Mb688haPHo1tfnw2M8zr-WMyiTMWuRDRT_onK8vdNV4w6pssdHvLbo__ov');">
+                            </div>
+                            <div class="p-6 flex flex-col gap-3">
+                                <h3 class="text-gray-900 dark:text-white text-xl font-bold">ShopAdmin Dashboard</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-3">
+                                    A comprehensive admin dashboard for e-commerce platforms featuring real-time
+                                    analytics, inventory management, and order tracking.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">React</span>
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">Chart.js</span>
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">Firebase</span>
+                                </div>
+                                <button
+                                    class="mt-4 w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Project Card 2 -->
+                        <div
+                            class="bg-background-light dark:bg-[#1a2329] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#283339] hover:shadow-lg transition-shadow group">
+                            <div class="h-48 w-full bg-cover bg-center" data-alt="Task Management App"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4ND8XuMqkDzpCtL1jFkQguInf5FqcDzdf00SlBe4bD3E4ETXZprd-x966Ap6WrCtn3PtJsL7R9roWFNcrFcVqY1PxiYbuOAp6TIq9qVZdHL78Dovyt7tPhbOLm7d1Xse3fH6B5IwlVRTGLswM3wMYU2VarpL4dBTFqtJsG0f7Hct61I9Dpoa6X8kKa042TQyb7iS8Mpc2-r6M2fl7njUwVMJdiPqTP0Le2DdUu-w2RnvRWGwLfGAra9ZaLQMoJiIAfsqhTj7RP6Tq');">
+                            </div>
+                            <div class="p-6 flex flex-col gap-3">
+                                <h3 class="text-gray-900 dark:text-white text-xl font-bold">TaskMaster App</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-3">
+                                    A collaborative task management tool that helps teams organize and prioritize
+                                    projects seamlessly with kanban boards.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">Vue.js</span>
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">Node.js</span>
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">Socket.io</span>
+                                </div>
+                                <button
+                                    class="mt-4 w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Project Card 3 -->
+                        <div
+                            class="bg-background-light dark:bg-[#1a2329] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#283339] hover:shadow-lg transition-shadow group">
+                            <div class="h-48 w-full bg-cover bg-center" data-alt="Finance Tracker Mobile UI"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC01N1PeaHm5z087R2d4_nImeR3f_GZRTeRx6YQjmYosx72U1OhbaNMYNXoPV3v9jl-1D9xEcDuW0L6Ad5JA8_oyXEvULd0hqs77JFZOM4_Z_5hMrmcqnRVgWtq6_t6hWuzk3U_KjCje_Yx_AglbNkCLmIhLo6Hk96gaUzx_daEXU2kFiakjkeIJYY9ZOpTyfiLgHsBrhj0QFWjh0AEXTe50bU3j45EPfrwak-TmQrp_rMVBMTysXbiB6ML630lY1OLXiVSVmFaNxHF');">
+                            </div>
+                            <div class="p-6 flex flex-col gap-3">
+                                <h3 class="text-gray-900 dark:text-white text-xl font-bold">CoinTracker</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-3">
+                                    A personal finance tracking web application that allows users to monitor their
+                                    spending habits and set budget goals.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">Next.js</span>
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">PostgreSQL</span>
+                                    <span
+                                        class="px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded">Prisma</span>
+                                </div>
+                                <button
+                                    class="mt-4 w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Education Section -->
+            <section class="px-4 md:px-40 flex justify-center py-16 bg-background-light dark:bg-[#111618]">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="px-4 pb-8 pt-5 text-center">
+                        <h2 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
+                            Education</h2>
+                    </div>
+                    <div class="px-4 space-y-6">
+                        <div
+                            class="bg-white dark:bg-[#1a2329] p-6 rounded-xl border border-gray-200 dark:border-[#283339] flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold">Master of Computer Science
+                                </h3>
+                                <p class="text-gray-600 dark:text-gray-400">Stanford University</p>
+                            </div>
+                            <div
+                                class="text-gray-500 dark:text-gray-400 text-sm font-medium bg-gray-100 dark:bg-[#111618] px-3 py-1 rounded w-fit">
+                                2018 - 2020</div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-[#1a2329] p-6 rounded-xl border border-gray-200 dark:border-[#283339] flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold">Bachelor of Science in
+                                    Information Technology</h3>
+                                <p class="text-gray-600 dark:text-gray-400">Massachusetts Institute of Technology</p>
+                            </div>
+                            <div
+                                class="text-gray-500 dark:text-gray-400 text-sm font-medium bg-gray-100 dark:bg-[#111618] px-3 py-1 rounded w-fit">
+                                2014 - 2018</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section -->
+            <section class="px-4 md:px-40 flex justify-center py-16 bg-white dark:bg-[#151c20]" id="contact">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="px-4 pb-8 pt-5 text-center">
+                        <h2 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em]">
+                            Get In Touch</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-2">Have a project in mind? Let's discuss.</p>
+                    </div>
+                    <div class="px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Contact Info -->
+                        <div class="space-y-6">
+                            <div
+                                class="bg-background-light dark:bg-[#1a2329] p-6 rounded-xl border border-gray-100 dark:border-[#283339]">
+                                <h3 class="text-gray-900 dark:text-white text-xl font-bold mb-4">Contact Information
+                                </h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined">mail</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                                            <a class="text-gray-900 dark:text-white font-medium hover:text-primary"
+                                                href="mailto:alex.morgan@dev.com">alex.morgan@dev.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined">call</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+                                            <p class="text-gray-900 dark:text-white font-medium">+1 (555) 123-4567</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined">chat</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400">WhatsApp</p>
+                                            <a class="text-gray-900 dark:text-white font-medium hover:text-primary"
+                                                href="#">Chat on WhatsApp</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact Form -->
+                        <form class="space-y-4">
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                                <input
+                                    class="w-full rounded-lg border-gray-300 dark:border-[#283339] bg-white dark:bg-[#111618] text-gray-900 dark:text-white px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                    placeholder="Your Name" type="text" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                                <input
+                                    class="w-full rounded-lg border-gray-300 dark:border-[#283339] bg-white dark:bg-[#111618] text-gray-900 dark:text-white px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                    placeholder="your@email.com" type="email" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                                <textarea
+                                    class="w-full rounded-lg border-gray-300 dark:border-[#283339] bg-white dark:bg-[#111618] text-gray-900 dark:text-white px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                                    placeholder="Tell me about your project..." rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-sky-600 transition-colors shadow-lg shadow-primary/20"
+                                type="button">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-[#111618] border-t border-[#283339] py-8">
+            <div class="px-4 md:px-40 flex justify-center">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1 items-center gap-6">
+                    <div class="flex items-center gap-2 text-white">
+                        <div class="size-6 text-primary">
+                            <span class="material-symbols-outlined text-2xl">terminal</span>
+                        </div>
+                        <span class="text-xl font-bold">DevPortfolio</span>
+                    </div>
+                    <div class="flex gap-6">
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#">
+                            <span class="material-symbols-outlined">public</span> <!-- generic web icon -->
+                        </a>
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#">
+                            <span class="material-symbols-outlined">code</span> <!-- generic code icon for github -->
+                        </a>
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                            <!-- generic at icon for social -->
+                        </a>
+                    </div>
+                    <p class="text-gray-500 text-sm">© 2023 Alex Morgan. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
