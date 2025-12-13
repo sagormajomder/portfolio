@@ -1,29 +1,28 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'ShopAdmin Dashboard',
+    title: 'Chapterly',
     description:
-      'A comprehensive admin dashboard for e-commerce platforms featuring real-time analytics, inventory management, and order tracking.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDk_cusmnVRnltapveA4CcPnOerwdHoEnJ8iDDfgQ_Ui07XuMHAEkKMSPQffBVg3cUZpuMVzmvpH1xA0-SAsHGoTGwf_0_Y8fWVjDH9pgiAY07wpjR9JGa_WlvUTOQQHWNgSXW2b4D0Wsegl4MT8jXPcKlxR7G309ThBU3BbfKi273Ve6ZO4eq9Q6bdxKseI0fMDWkv0EPVA5NEKGn1F_Mb688haPHo1tfnw2M8zr-WMyiTMWuRDRT_onK8vdNV4w6pssdHvLbo__ov',
-    tags: ['React', 'Chart.js', 'Firebase'],
+      'Chapterly helps readers explore, manage, and personalize book collections in one intuitive, user-friendly digital library platform.',
+    image: 'https://i.ibb.co.com/9HB1rwT2/Screenshot-2025-12-13-193004.png',
+    tags: ['React', 'Express', 'Firebase', 'Mongodb'],
   },
   {
-    title: 'TaskMaster App',
+    title: 'Game Matrix',
     description:
-      'A collaborative task management tool that helps teams organize and prioritize projects seamlessly with kanban boards.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuB4ND8XuMqkDzpCtL1jFkQguInf5FqcDzdf00SlBe4bD3E4ETXZprd-x966Ap6WrCtn3PtJsL7R9roWFNcrFcVqY1PxiYbuOAp6TIq9qVZdHL78Dovyt7tPhbOLm7d1Xse3fH6B5IwlVRTGLswM3wMYU2VarpL4dBTFqtJsG0f7Hct61I9Dpoa6X8kKa042TQyb7iS8Mpc2-r6M2fl7njUwVMJdiPqTP0Le2DdUu-w2RnvRWGwLfGAra9ZaLQMoJiIAfsqhTj7RP6Tq',
-    tags: ['Vue.js', 'Node.js', 'Socket.io'],
+      'Discover and play unique indie games from a curated collection, with regular updates delivered through a gamer-focused newsletter.',
+    image: 'https://i.ibb.co.com/S7xW6hXS/Screenshot-2025-12-13-194336.png',
+    tags: ['TailwindCSS', 'React', 'Firebase'],
   },
   {
-    title: 'CoinTracker',
+    title: 'MeowketPlace',
     description:
-      'A personal finance tracking web application that allows users to monitor their spending habits and set budget goals.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuC01N1PeaHm5z087R2d4_nImeR3f_GZRTeRx6YQjmYosx72U1OhbaNMYNXoPV3v9jl-1D9xEcDuW0L6Ad5JA8_oyXEvULd0hqs77JFZOM4_Z_5hMrmcqnRVgWtq6_t6hWuzk3U_KjCje_Yx_AglbNkCLmIhLo6Hk96gaUzx_daEXU2kFiakjkeIJYY9ZOpTyfiLgHsBrhj0QFWjh0AEXTe50bU3j45EPfrwak-TmQrp_rMVBMTysXbiB6ML630lY1OLXiVSVmFaNxHF',
-    tags: ['Next.js', 'PostgreSQL', 'Prisma'],
+      'MeowketPlace is a pet‑focused marketplace designed to simplify shopping for pet essentials, offering a clean, playful, and trustworthy experience for owners and their beloved companions.',
+    image: 'https://i.ibb.co.com/5gBSxZ45/Screenshot-2025-12-13-194147.png',
+    tags: ['Next.js', 'Clerk', 'Mongodb'],
   },
 ];
 

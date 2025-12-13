@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -34,18 +36,16 @@ const About = () => {
               new tools to solve the right problems.
             </p>
             <p className='text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed'>
-              Beyond coding, I love mentoring junior developers and contributing
-              to open-source projects. When I'm not at my computer, you can find
-              me hiking, reading sci-fi novels, or experimenting with new coffee
-              brewing methods.
+              Beyond coding, I love contributing to open-source projects. When
+              I'm not at my computer, you can find me reading sci-fi novels.
             </p>
           </div>
           {/* Mini Stats */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mt-8'>
+          <div className='grid grid-cols-2 md:grid-cols-3 gap-4 mt-8'>
             {[
-              { value: '5+', label: 'Years Experience' },
-              { value: '50+', label: 'Projects Done' },
-              { value: '20+', label: 'Happy Clients' },
+              { value: '1+', label: 'Years Experience' },
+              { value: '10+', label: 'Projects Done' },
+              // { value: '20+', label: 'Happy Clients' },
               { value: '100%', label: 'Commitment' },
             ].map((stat, index) => (
               <motion.div

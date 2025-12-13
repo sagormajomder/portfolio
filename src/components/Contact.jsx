@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -63,7 +65,7 @@ const Contact = () => {
                     </p>
                     <a
                       className='text-gray-900 dark:text-white font-medium hover:text-primary'
-                      href='#'>
+                      href='https://wa.me/8801683428564'>
                       Chat on WhatsApp
                     </a>
                   </div>

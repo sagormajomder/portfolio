@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { CiLinkedin } from 'react-icons/ci';
 import { HiOutlineDownload } from 'react-icons/hi';
