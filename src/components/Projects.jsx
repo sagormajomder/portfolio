@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -9,6 +10,7 @@ const projects = [
       'Chapterly helps readers explore, manage, and personalize book collections in one intuitive, user-friendly digital library platform.',
     image: 'https://i.ibb.co.com/9HB1rwT2/Screenshot-2025-12-13-193004.png',
     tags: ['React', 'Express', 'Firebase', 'Mongodb'],
+    githubLink: 'https://github.com/sagormajomder/chapterly',
   },
   {
     title: 'Game Matrix',
@@ -16,6 +18,7 @@ const projects = [
       'Discover and play unique indie games from a curated collection, with regular updates delivered through a gamer-focused newsletter.',
     image: 'https://i.ibb.co.com/S7xW6hXS/Screenshot-2025-12-13-194336.png',
     tags: ['TailwindCSS', 'React', 'Firebase'],
+    githubLink: 'https://github.com/sagormajomder/game-matrix',
   },
   {
     title: 'MeowketPlace',
@@ -23,6 +26,7 @@ const projects = [
       'MeowketPlace is a pet‑focused marketplace designed to simplify shopping for pet essentials, offering a clean, playful, and trustworthy experience for owners and their beloved companions.',
     image: 'https://i.ibb.co.com/5gBSxZ45/Screenshot-2025-12-13-194147.png',
     tags: ['Next.js', 'Clerk', 'Mongodb'],
+    githubLink: 'https://github.com/sagormajomder/meowket-place',
   },
 ];
 
@@ -69,9 +73,11 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <button className='mt-4 w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors'>
-                  View Details
-                </button>
+                <Link href={project.githubLink} target='_blank'>
+                  <button className='mt-4 w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors'>
+                    View Details
+                  </button>
+                </Link>
               </div>
             </motion.div>
           ))}
