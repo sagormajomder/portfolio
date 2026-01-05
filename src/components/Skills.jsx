@@ -57,8 +57,8 @@ const Skills = () => {
               key={skillGroup.category}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-              viewport={{ once: true }}>
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}>
               <h3 className='text-gray-900 dark:text-white text-xl font-semibold mb-4 flex items-center gap-2'>
                 <span className='material-symbols-outlined text-primary'>
                   {skillGroup.icon}

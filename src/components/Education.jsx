@@ -15,6 +15,7 @@ const Education = () => {
           <motion.div
             initial={{ x: 20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className='bg-white dark:bg-[#1a2329] p-6 rounded-xl border border-gray-200 dark:border-[#283339] flex flex-col md:flex-row md:items-center justify-between gap-4'>
             <div>

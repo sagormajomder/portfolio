@@ -23,8 +23,8 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
           className='px-4'>
           <div className='bg-gray-50 dark:bg-[#1a2329] p-8 rounded-xl border border-gray-100 dark:border-[#283339]'>
             <p className='text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed pb-6'>

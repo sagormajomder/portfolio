@@ -26,6 +26,7 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
+              // viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className='flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center flex-1'>
               <div className='flex flex-col gap-4 text-left'>
@@ -74,6 +75,7 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className='w-full max-w-[320px] md:max-w-[400px] flex justify-center @[864px]:w-1/2'>
               <div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-[#283339] shadow-2xl'>

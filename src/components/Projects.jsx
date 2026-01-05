@@ -1,32 +1,48 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import ProjectCard from './projects/ProjectCard';
 
 const projects = [
   {
+    title: 'Champy',
+    tagline: 'Challenge Yourself, Conquer the World',
+    description:
+      'Champy is a dynamic contest platform designed to foster competition and skill development. It offers a user-friendly interface for participants to join various contests, track their progress on global leaderboards, and engage with a community of like-minded individuals. Built with modern web technologies, Champy ensures a seamless and responsive experience for all users.',
+    image: 'https://i.ibb.co.com/1fyYMZkv/Screenshot-2026-01-05-120641.png',
+    tags: ['React', 'Express', 'Firebase', 'Mongodb'],
+    githubLink: 'https://github.com/sagormajomder/champy',
+    liveLink: 'https://champy-sm.web.app/',
+  },
+  {
     title: 'Chapterly',
+    tagline: 'Every Book, Every Chapter, Your Way',
     description:
       'Chapterly helps readers explore, manage, and personalize book collections in one intuitive, user-friendly digital library platform.',
     image: 'https://i.ibb.co.com/9HB1rwT2/Screenshot-2025-12-13-193004.png',
     tags: ['React', 'Express', 'Firebase', 'Mongodb'],
     githubLink: 'https://github.com/sagormajomder/chapterly',
+    liveLink: 'https://chapterly-sm.web.app/',
   },
-  {
-    title: 'Game Matrix',
-    description:
-      'Discover and play unique indie games from a curated collection, with regular updates delivered through a gamer-focused newsletter.',
-    image: 'https://i.ibb.co.com/S7xW6hXS/Screenshot-2025-12-13-194336.png',
-    tags: ['TailwindCSS', 'React', 'Firebase'],
-    githubLink: 'https://github.com/sagormajomder/game-matrix',
-  },
+
   {
     title: 'MeowketPlace',
+    tagline: 'Your one‑stop shop for happy pets',
     description:
       'MeowketPlace is a pet‑focused marketplace designed to simplify shopping for pet essentials, offering a clean, playful, and trustworthy experience for owners and their beloved companions.',
     image: 'https://i.ibb.co.com/5gBSxZ45/Screenshot-2025-12-13-194147.png',
     tags: ['Next.js', 'Clerk', 'Mongodb'],
     githubLink: 'https://github.com/sagormajomder/meowket-place',
+    liveLink: 'https://meowket-place.vercel.app/',
+  },
+  {
+    title: 'Game Matrix',
+    tagline: 'Dive into the world of games.',
+    description:
+      'Discover and play unique indie games from a curated collection, with regular updates delivered through a gamer-focused newsletter.',
+    image: 'https://i.ibb.co.com/S7xW6hXS/Screenshot-2025-12-13-194336.png',
+    tags: ['TailwindCSS', 'React', 'Firebase'],
+    githubLink: 'https://github.com/sagormajomder/game-matrix',
+    liveLink: 'https://game-matrix-sm.web.app/',
   },
 ];
 
@@ -44,42 +60,9 @@ const Projects = () => {
             A selection of things I've built.
           </p>
         </div>
-        <div className='px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8'>
+        <div className='px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className='bg-background-light dark:bg-[#1a2329] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-[#283339] hover:shadow-lg transition-all group'>
-              <div
-                className='h-48 w-full bg-cover bg-center'
-                style={{ backgroundImage: `url('${project.image}')` }}></div>
-              <div className='p-6 flex flex-col gap-3'>
-                <h3 className='text-gray-900 dark:text-white text-xl font-bold'>
-                  {project.title}
-                </h3>
-                <p className='text-gray-600 dark:text-gray-400 text-sm line-clamp-3'>
-                  {project.description}
-                </p>
-                <div className='flex flex-wrap gap-2 mt-2'>
-                  {project.tags.map(tag => (
-                    <span
-                      key={tag}
-                      className='px-2 py-1 bg-primary/10 text-primary text-xs font-semibold rounded'>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <Link href={project.githubLink} target='_blank'>
-                  <button className='mt-4 w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors'>
-                    View Details
-                  </button>
-                </Link>
-              </div>
-            </motion.div>
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
       </div>
