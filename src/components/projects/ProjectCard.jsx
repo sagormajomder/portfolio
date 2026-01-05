@@ -29,10 +29,7 @@ const ProjectCard = ({ project, index }) => {
             </span>
           ))}
         </div>
-        <Link
-          href={project.githubLink}
-          target='_blank'
-          className='mt-auto w-full'>
+        <Link href={`/project/${project.id}`} className='mt-auto w-full'>
           <button className='mt-4 w-full py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg text-sm font-semibold transition-colors'>
             View Details
           </button>
