@@ -50,7 +50,7 @@ const Hero = () => {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href='https://drive.google.com/file/d/1-F_qXNiYf7QhrQrP19UQcLGp_aDh_1KL/view?usp=sharing'
+                  href='/Full-Stack-Developer-Resume-Sagor-Majomder.pdf'
                   target='_blank'
                   className='flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-sky-600 transition-colors shadow-lg shadow-primary/20 gap-1'>
                   <HiOutlineDownload className='text-xl' />
