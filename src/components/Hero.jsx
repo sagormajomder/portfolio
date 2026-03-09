@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { CiLinkedin } from 'react-icons/ci';
 import { HiOutlineDownload } from 'react-icons/hi';
 import { VscGithub } from 'react-icons/vsc';
@@ -79,12 +80,14 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
               className='w-full max-w-[320px] md:max-w-[400px] flex justify-center @[864px]:w-1/2'>
               <div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-[#283339] shadow-2xl'>
-                <div
-                  className='w-full h-full bg-top bg-no-repeat bg-cover'
-                  data-alt='Portrait of Alex Morgan'
-                  style={{
-                    backgroundImage: 'url(/dev.png)',
-                  }}></div>
+                <Image
+                  className='w-full h-full object-top object-cover'
+                  alt='Portrait of Sagor Majomder'
+                  fill
+                  priority
+                  sizes='(max-width: 768px) 256px, 320px'
+                  src='/professional.png'
+                />
               </div>
             </motion.div>
           </div>
