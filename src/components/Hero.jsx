@@ -78,15 +78,15 @@ const Hero = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className='w-full max-w-[320px] md:max-w-[400px] flex justify-center @[864px]:w-1/2'>
+              className='w-full max-w-[320px] md:max-w-100 flex justify-center @[864px]:w-1/2'>
               <div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-[#283339] shadow-2xl'>
                 <Image
-                  className='w-full h-full object-top object-cover'
+                  className='object-center'
                   alt='Portrait of Sagor Majomder'
                   fill
                   priority
                   sizes='(max-width: 768px) 256px, 320px'
-                  src='/professional.png'
+                  src='/amar-picture.jpg'
                 />
               </div>
             </motion.div>

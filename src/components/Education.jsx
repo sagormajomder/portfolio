@@ -27,7 +27,7 @@ const Education = () => {
               </p>
             </div>
             <div className='text-gray-500 dark:text-gray-400 text-sm font-medium bg-gray-100 dark:bg-[#111618] px-3 py-1 rounded w-fit'>
-              2019 - 2022
+              2019 - 2023
             </div>
           </motion.div>
         </div>

@@ -13,7 +13,7 @@ const ProjectCard = ({ project, index }) => {
       <div
         className='h-48 w-full bg-cover bg-center shrink-0'
         style={{ backgroundImage: `url('${project.image}')` }}></div>
-      <div className='p-6 flex flex-col gap-3 flex-grow'>
+      <div className='p-6 flex flex-col gap-3 grow'>
         <h3 className='text-gray-900 dark:text-white text-xl font-bold'>
           {project.title}
         </h3>

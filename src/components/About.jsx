@@ -28,7 +28,7 @@ const About = () => {
           className='px-4'>
           <div className='bg-gray-50 dark:bg-[#1a2329] p-8 rounded-xl border border-gray-100 dark:border-[#283339]'>
             <p className='text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed pb-6'>
-              I am a passionate Full Stack Developer with over 5 years of
+              I am a passionate Full Stack Developer with over 1 years of
               experience in building digital products. My journey began with a
               curiosity for how things work on the web, which quickly turned
               into a career obsession. I specialize in the JavaScript ecosystem,

@@ -1,12 +1,57 @@
 export const projects = [
   {
+    id: 'story-arc',
+    title: 'Story Arc',
+    tagline: 'Your Personal Library Companion',
+    description:
+      "Story Arc is a modern book tracking application that empowers readers to catalog their journeys, set reading goals, and discover their next favorite story. With a sleek dark-themed UI and powerful features, it's designed for book lovers who want a premium digital library experience.",
+    image:
+      'https://i.ibb.co.com/G4gpL2QB/Screenshot-From-2026-06-07-11-51-18.png',
+    tags: [
+      'Next.js 16',
+      'Shadcn',
+      'Recharts',
+      'Motion',
+      'NextAuth',
+      'Express',
+      'JWT',
+      'Mongodb',
+    ],
+    githubLink: 'https://github.com/sagormajomder/story-arc',
+    liveLink: 'https://story-arc-sm.vercel.app',
+    challenges: [
+      'Frontend/Backend coordination: Managing API contracts, CORS, and proxying between Next.js app and Express backend.',
+      'Auth complexity: Token storage/refresh, protected routes, and role-based access across client and server.',
+      'Routing / Rendering mix: Balancing Next.js App Router SSR/SSR-edge/CSR for dynamic pages and auth flows.',
+      'Performance at scale: Inefficient queries, lack of caching/pagination for large book/review datasets.',
+    ],
+    improvements: [
+      'Adopt TypeScript: Migrate key packages to TypeScript for safer refactors and better DX.',
+      'Unit tests for controllers/components, integration tests for APIs, and Cypress/Playwright E2',
+      'Improve auth robustness: Implement refresh-token flow, token rotation, and granular RBAC for admin/user routes.',
+      'CI/CD pipeline: Automated linting, tests, builds, and deploys (GitHub Actions or similar).',
+    ],
+  },
+  {
     id: 'champy',
     title: 'Champy',
     tagline: 'Challenge Yourself, Conquer the World',
     description:
       'Champy is a dynamic contest platform designed to foster competition and skill development. It offers a user-friendly interface for participants to join various contests, track their progress on global leaderboards, and engage with a community of like-minded individuals. Built with modern web technologies, Champy ensures a seamless and responsive experience for all users.',
     image: 'https://i.ibb.co.com/1fyYMZkv/Screenshot-2026-01-05-120641.png',
-    tags: ['React', 'Express', 'Firebase', 'Mongodb'],
+    tags: [
+      'React',
+      'TailwindCSS',
+      'Motion',
+      'Recharts',
+      'Axios',
+      'React Router',
+      'React Query',
+      'Express',
+      'Stripe',
+      'Firebase',
+      'Mongodb',
+    ],
     githubLink: 'https://github.com/sagormajomder/champy',
     liveLink: 'https://champy-sm.web.app/',
     challenges: [
@@ -26,7 +71,17 @@ export const projects = [
     description:
       'Chapterly helps readers explore, manage, and personalize book collections in one intuitive, user-friendly digital library platform.',
     image: 'https://i.ibb.co.com/9HB1rwT2/Screenshot-2025-12-13-193004.png',
-    tags: ['React', 'Express', 'Firebase', 'Mongodb'],
+    tags: [
+      'React',
+      'TailwindCSS',
+      'DaisyUI',
+      'Motion',
+      'Axios',
+      'React Router',
+      'Express',
+      'Firebase',
+      'Mongodb',
+    ],
     githubLink: 'https://github.com/sagormajomder/chapterly',
     liveLink: 'https://chapterly-sm.web.app/',
     challenges: [
@@ -47,7 +102,7 @@ export const projects = [
     description:
       'MeowketPlace is a pet‑focused marketplace designed to simplify shopping for pet essentials, offering a clean, playful, and trustworthy experience for owners and their beloved companions.',
     image: 'https://i.ibb.co.com/5gBSxZ45/Screenshot-2025-12-13-194147.png',
-    tags: ['Next.js', 'Clerk', 'Mongodb'],
+    tags: ['Next.js 16', 'TailwindCSS', 'Clerk', 'Mongodb', 'Stripe'],
     githubLink: 'https://github.com/sagormajomder/meowket-place',
     liveLink: 'https://meowket-place.vercel.app/',
     challenges: [
@@ -68,7 +123,14 @@ export const projects = [
     description:
       'Discover and play unique indie games from a curated collection, with regular updates delivered through a gamer-focused newsletter.',
     image: 'https://i.ibb.co.com/S7xW6hXS/Screenshot-2025-12-13-194336.png',
-    tags: ['TailwindCSS', 'React', 'Firebase'],
+    tags: [
+      'TailwindCSS',
+      'DaisyUI',
+      'Motion',
+      'React',
+      'React Router',
+      'Firebase',
+    ],
     githubLink: 'https://github.com/sagormajomder/game-matrix',
     liveLink: 'https://game-matrix-sm.web.app/',
     challenges: [
