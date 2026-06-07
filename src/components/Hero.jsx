@@ -81,12 +81,12 @@ const Hero = () => {
               className='w-full max-w-[320px] md:max-w-100 flex justify-center @[864px]:w-1/2'>
               <div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-[#283339] shadow-2xl'>
                 <Image
-                  className='object-center'
+                  className='object-cover object-top h-full'
                   alt='Portrait of Sagor Majomder'
                   fill
                   priority
                   sizes='(max-width: 768px) 256px, 320px'
-                  src='/amar-picture.jpg'
+                  src='/full-optimize-rsz-my-image.png'
                 />
               </div>
             </motion.div>
